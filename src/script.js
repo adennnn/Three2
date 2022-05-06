@@ -8,18 +8,17 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
  */
 
 
-
- const loader = new GLTFLoader();
-
- loader.load( '', function ( gltf ) {
+ //const loader = new THREE.GLTFLoader();
+ //loader.load( 'static/hammer.gltf', function ( gltf ) {
  
-     scene.add( gltf.scene );
+   //  scene.add(gltf.scene);
  
- }, undefined, function ( error ) {
  
-     console.error( error );
+ //}, undefined, function ( error ) {
  
- } );
+  //   console.error( error );
+ 
+ //} );
  
 const gui = new dat.GUI()
 
@@ -74,17 +73,15 @@ const mesh3 = new THREE.Mesh(
 )
 
 mesh1.position.x = 2
-mesh2.position.x = - 2
-mesh3.position.x = 2
+
 
 mesh1.position.y = - objectsDistance * 0
-mesh2.position.y = - objectsDistance * 1
-mesh3.position.y = - objectsDistance * 2
 
 
-scene.add(mesh1, mesh2, mesh3)
 
-const sectionMeshes = [ mesh1, mesh2, mesh3 ]
+scene.add(mesh1 )
+
+const sectionMeshes = [ mesh1]
 
 /**
  * Lights
